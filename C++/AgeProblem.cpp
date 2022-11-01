@@ -1,6 +1,6 @@
 //
 // Created by Jion Biju on 11/1/2022.
-//find wheather the person is adult or minor.
+//find wheather the person is adult or minor
 #include <iostream>
 
 int main()
