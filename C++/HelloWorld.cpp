@@ -5,6 +5,8 @@
 
 int main()
 {
-    std::cout<<"Hello, My Name is jion Biju!"<<std::endl;
+    std::cout<<"Hello world, This is my first program "<<std::endl;
     return 0;
 }
+//=============Output=====================
+//Hello world, This is my first program
