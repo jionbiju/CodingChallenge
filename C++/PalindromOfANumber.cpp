@@ -31,4 +31,4 @@ int main()
 
 //======================================================
 //Enter a number:121
-//121 is palindrome        
+//121 is palindrome
