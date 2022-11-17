@@ -6,7 +6,7 @@
 int main()
 {
     int n;
-    std::cout<<"Enter the limit: ";
+    std::cout<<"Enter the limit of the String: ";
     std::cin>>n;
     char letter[n];
     for (char i=0;i<n;i++) {
@@ -23,7 +23,7 @@ int main()
 }
 
 //===============OUTPUT===================
-//Enter the limit:4
+//Enter the limit of the String:4
 //Enter a letter:J
 //Enter a letter:I
 //Enter a letter:O
