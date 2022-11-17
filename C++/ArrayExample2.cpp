@@ -9,12 +9,12 @@ int main()
     std::cout<<"Enter the limit of the String: ";
     std::cin>>n;
     char letter[n];
-    for (char i=0;i<n;i++) {
+    for (int i=0;i<n;i++) {
         std::cout<<"Enter a letter: ";
         std::cin>>letter[i];
     }
-    for (char i=0;i<n;i++) {
-        for (char j=0;j<i+1;j++) {
+    for (int i=0;i<n;i++) {
+        for (int j=0;j<i+1;j++) {
             std::cout<<"\t"<<letter[j];
         }
         std::cout<<std::endl;
