@@ -1,10 +1,14 @@
 //
 // Created by Jion Biju on 1/5/2023.
-/* A:Creating an array n integer element
- * B:Display of an array element.
- * C:Insert an element at a given valid position.
- * D:Delete an element at a given valid position.
- * E:Exit*/
+
+//Design, Develop and Implement a menu driven Program in C for the following Array operations.
+//a. Creating an Array of N Integer Elements
+//b. Display of Array Elements with Suitable Headings
+//c. Inserting an Element (ELEM) at a given valid Position (POS)
+//d. Deleting an Element at a given valid Position(POS)
+//e. Exit.
+//Support the program with functions for each of the above operations
+
 #include <iostream>
 int arr[10];
 int n,pos,value;
