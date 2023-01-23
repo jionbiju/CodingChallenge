@@ -39,13 +39,14 @@ int main()
 }
 //==================OUTPUT==========
 //Enter the array size:
-//4
+//5
 //Enter the array elements:
-//8
-//3
-//2
+//-2
+//45
 //1
+//12
+//-9
 //Array elements are :
-//8 3 2 1
+//-2 45 1 12 -9
 //Sorted elements are :
-//1 2 3 8
+//-9 -2 1 12 45
