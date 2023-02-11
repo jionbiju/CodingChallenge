@@ -1,6 +1,6 @@
 //
 // Created by Jion Biju on 1/26/2023.
-//Stucture example.
+//Structure example.
 #include <iostream>
 struct person{
     char name[50];
