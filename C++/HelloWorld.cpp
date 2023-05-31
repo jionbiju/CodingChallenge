@@ -5,6 +5,7 @@
 
 int main(){
     std::cout<<"Hello world, This is my first program";
+    return 0;
 }
 //=============Output=====================
 //Hello world, This is my first program
