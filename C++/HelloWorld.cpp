@@ -3,10 +3,8 @@
 //
 #include <iostream>
 
-int main()
-{
-    std::cout<<"Hello world, This is my first program "<<std::endl;
-    return 0;
+int main(){
+    std::cout<<"Hello world, This is my first program";
 }
 //=============Output=====================
 //Hello world, This is my first program
