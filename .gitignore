@@ -3,3 +3,8 @@ C++/cmake-build-debug
 C++/CMakeLists.txt
 C++/main.cpp
 !C++/
+
+Java/.idea
+Java/Java.iml
+Java/out
+!Java/src/
