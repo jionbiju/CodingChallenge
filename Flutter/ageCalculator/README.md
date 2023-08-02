@@ -1,8 +1,13 @@
-# sample_project
+# age_calculator
 
 A new Flutter project.
 
-## Getting Started
+## Screenshot
+<img src="C:\Users\Adon Biju\Pictures\Screenshots\Screenshot 2023-08-02 083937.png"/>
+<img src="C:\Users\Adon Biju\Pictures\Screenshots\Screenshot 2023-08-02 084149.png" />
+
+
+
 
 This project is a starting point for a Flutter application.
 
