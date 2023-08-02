@@ -3,8 +3,9 @@
 A new Flutter project.
 
 ## Screenshot
-<img src="C:\Users\Adon Biju\Pictures\Screenshots\Screenshot 2023-08-02 083937.png"/>
-<img src="C:\Users\Adon Biju\Pictures\Screenshots\Screenshot 2023-08-02 084149.png" />
+![Screenshot 2023-08-02 083937](https://github.com/jionbiju/CodingChallenge/assets/117101994/c475cad8-9005-4ec1-98aa-21da7ea4c074)
+![Screenshot 2023-08-02 084149](https://github.com/jionbiju/CodingChallenge/assets/117101994/d724300a-29ec-4c64-9973-b1db37e49768)
+![Screenshot 2023-08-02 084210](https://github.com/jionbiju/CodingChallenge/assets/117101994/8cf165e8-6de2-476d-b542-d68b93f73bb7)
 
 
 
