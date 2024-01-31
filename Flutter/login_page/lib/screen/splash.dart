@@ -32,8 +32,8 @@ class _ScreenSplashState extends State<ScreenSplash> {
   }
 Future<void> checkUserLoggedin()async{
   final sharedpref=await SharedPreferences.getInstance();
-  final UserLoggedIn=sharedpref.getBool(SAVE_KEY_NAME);
-  if(UserLoggedIn==null || UserLoggedIn==false){
+  final userLoggedIn=sharedpref.getBool(SAVE_KEY_NAME);
+  if(userLoggedIn==null || userLoggedIn==false){
     gotologin();
   }else{
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx)=> HomeScreen()));

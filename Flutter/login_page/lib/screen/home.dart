@@ -19,7 +19,9 @@ class HomeScreen extends StatelessWidget {
       ),
       body:SafeArea(
         child: Center(
-        child: const Text('Home'))),
+        child: const Text('Home'))
+        
+        ),
     );
   }
   signout(BuildContext ctx)async {
