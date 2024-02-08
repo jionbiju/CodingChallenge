@@ -8,4 +8,5 @@ Java/.idea
 Java/Java.iml
 Java/out
 !Java/src/
-.exe
+*.exe
+
