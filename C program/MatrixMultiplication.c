@@ -54,16 +54,16 @@ void main()
                     p[i][j]=p[i][j]+((a[i][k]*b[k][j]));
                 }
             }
-        }
-        printf("Products of the matrix is:\n");
+        } 
+    printf("Products of the matrix is:\n");
           for(i=0;i<m1;i++)
-              {
+                {
                  for(j=0;j<n2;j++)
-                     {
+                    {
                         printf("%d\t",p[i][j]);
-                     }
+                    }
                       printf("\n");
-              }
+                }
     }
     else
     {
