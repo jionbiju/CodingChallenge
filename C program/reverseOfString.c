@@ -1,7 +1,7 @@
 #include <stdio.h>
 void main()
 {
-    char,temp s[100];
+    char temp, s[100];
     int len = 0;
     printf("Enter a string:");
     scanf("%s", s);
@@ -21,7 +21,7 @@ void main()
 
 /*
 OUTPUT
-Enter a string:hai
-String length is 3
-Reverse of string is iah
+Enter a string:Hello
+String length is 5
+Reverse of string is olleH
 */
