@@ -4,7 +4,8 @@ void main()
     char temp, s[100];
     int len = 0;
     printf("Enter a string:");
-    scanf("%s", s);
+    gets(s);
+    //scanf("%s", s);
     for (int i = 0; s[i] != '\0'; i++)
     {
         len++;
