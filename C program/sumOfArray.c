@@ -31,4 +31,5 @@ Enter the elements:
 4
 5
 Sum of elements=15.00
+Averge=3.000000                     
 */ 
