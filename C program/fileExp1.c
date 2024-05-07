@@ -16,6 +16,7 @@ void main(){
         ch=fgetc(fp);
         printf("%c",ch);
     }
+    fclose(fp);
 }
 
 //Output
