@@ -14,3 +14,10 @@ void main(){
     }
     
 }
+//OUTPUT
+/*
+Enter the limit:
+5
+First 5 natural numbers are:
+1       2       3       4       5
+*/
