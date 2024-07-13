@@ -11,7 +11,7 @@ void read(int arr[],int n){
 
 void display(int arr[],int n){
     int i;
-    printf("Numbers are:\n");
+    printf("Sum of the two arrays is:\n");
     for (i = 0; i < n; i++) {
         printf("%d\t",arr[i]);
     }
@@ -56,6 +56,6 @@ Enter the numbers of the second array:
 4
 5
 6
-Numbers are:
+Sum of the two arrays is:
 5       7       9
 */
