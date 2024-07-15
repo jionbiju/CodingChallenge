@@ -1,7 +1,6 @@
 //Read roll number, name, and total mark of n students and display the data.
 
 #include <stdio.h>
-
 struct student
 {
     int roll_num,mark;
