@@ -14,7 +14,7 @@ class ScreenSplash extends StatefulWidget {
 class _ScreenSplashState extends State<ScreenSplash> {
   @override
   void initState() {
-    checkUserLoggedin();
+     checkUserLoggedin();
     super.initState();
   }
   @override
