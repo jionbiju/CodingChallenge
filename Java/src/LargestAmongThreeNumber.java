@@ -9,6 +9,7 @@ public class LargestAmongThreeNumber {
         a = scan.nextInt();
         b = scan.nextInt();
         c = scan.nextInt();
+        scan.close();
         if(a>b && a>c){
             System.out.println("Largest Number is "+a);
         } else if (b>a && b>c) {
