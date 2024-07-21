@@ -5,7 +5,7 @@
 
 int main(){
     std::string name;
-    std::cout<<"Enter a name ";
+    std::cout<<"Enter a Name ";
     std::cin>>name;
     std::cout<<name;
     return 0;
