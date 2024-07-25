@@ -10,4 +10,10 @@ Java/out
 !Java/src/
 *.exe
 *.txt
+*.iml
+.idea/
+*.class
+.DS_Store
+Thumbs.db
+
 
