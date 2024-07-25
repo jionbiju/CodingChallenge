@@ -113,4 +113,5 @@ Enter coefficient and power of term 3
 0
 Polynomial 1 is: 5x^3 + 2x^2 + 3x^1 + 2
 Polynomial 2 is: 4x^2 + 2x^1 + 1
+Polynomial sum is: 5x^3 + 6x^2 + 5x^1 + 3
 */
