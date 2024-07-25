@@ -14,7 +14,7 @@ public class Frequency {
                 count++;
             }
         }
-        System.out.println("The character "+ c +" appear "+count + " times in the string.");
+        System.out.println("The character "+ c +" appear "+ count + " times in the string.");
 
     }
 }
