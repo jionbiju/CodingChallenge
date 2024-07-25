@@ -11,9 +11,5 @@ Java/out
 *.exe
 *.txt
 *.iml
-.idea/
-*.class
-.DS_Store
-Thumbs.db
 
 
