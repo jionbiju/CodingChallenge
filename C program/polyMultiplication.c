@@ -30,7 +30,6 @@ void display(struct poly p[],int t){
             printf(" + ");
         }
     }
-    printf("\b");
     printf("\n");
     
 }
