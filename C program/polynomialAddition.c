@@ -55,13 +55,15 @@ int polyadd(struct poly p1[],struct poly p2[],struct poly p3[],int t1,int t2){
 void display(struct poly p[],int t){
     for(int i=0; i<t; i++){
         if(p[i].expo > 0){
-        printf("%dx^%d + ",p[i].coeff,p[i].expo);
+        printf("%dx^%d ",p[i].coeff,p[i].expo);
         }
-        if(p[i].expo == 0){
+        else{
         printf("%d",p[i].coeff);
         }
+        if (i != (t-1)) {
+            printf(" + ");
+        }
     }
-    printf("\b");
     printf("\n");
     
 }
