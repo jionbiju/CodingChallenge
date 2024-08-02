@@ -21,10 +21,13 @@ int polyread(struct poly p[]){
 void display(struct poly p[],int t){
     for(int i=0; i<t; i++){
         if(p[i].expo > 0){
-        printf("%dx^%d + ",p[i].coeff,p[i].expo);
+        printf("%dx^%d ",p[i].coeff,p[i].expo);
         }
-        if(p[i].expo == 0){
+        else{
         printf("%d",p[i].coeff);
+        }
+        if (i != (t-1)) {
+            printf(" + ");
         }
     }
     printf("\b");
