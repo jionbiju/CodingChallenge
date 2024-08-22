@@ -36,9 +36,10 @@ int priority(char c){
 
 void main(){
     char ch;
-    printf("Enter a expression\n");
+    printf("Enter a Infix Expression\n");
     scanf("%s",infix);
     int i=0;
+    printf("Postfix Expression:");
     while (infix[i] != '\0'){
         if(isalnum(infix[i])){
             printf("%c",infix[i]);
@@ -65,7 +66,7 @@ void main(){
 }
 /*
 OUTPUT
-Enter a expression
+Enter a Infix Expression
 A+B*C/D-F+A^E
-ABC*D/+F-AE^+
+Postfix Expression:ABC*D/+F-AE^+
 */
