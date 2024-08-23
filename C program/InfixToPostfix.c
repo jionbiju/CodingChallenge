@@ -54,6 +54,9 @@ void main(){
         }
         else{
             while(priority(stack[top])>=priority(infix[i])){
+                if (infix[i] == '^' && stack[top] == '^') {
+                    break; 
+                }
                 printf("%c",pop());
             }
             push(infix[i]);
