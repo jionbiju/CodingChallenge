@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const port = 4000;
 const path = require("path");
 const {error} = require("console");
+require('dotenv').config();
 const TodoModel = require('./Models/TodoModel')
 
 //Cors 
@@ -17,8 +18,7 @@ app.get("/",(req,res)=>{
 })
 
 //MongoDB connection
-
-mongoose.connect("mongodb+srv://jionbiju:670633@cluster0.wazkg.mongodb.net/Todo")
+mongoose.connect(process.env.MONGO_DB)
 .then(()=>{
     app.listen(port,() => {
         console.log("DB connected successfully and server is running in the port "+port);
