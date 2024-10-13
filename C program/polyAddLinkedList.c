@@ -11,7 +11,7 @@ struct node *phead,*qhead,*rhead;
 struct node *readPoly(){
     struct node *new,*ptr,*head=NULL;
     int n;
-    printf("Enter the number of terms in the polynomial:\n");
+    printf("Enter the number of terms in the Polynomial:\n");
     scanf("%d",&n);
     for(int i=1; i<=n; i++){
         printf("Enter coeff and expo of term %d\n",i);
