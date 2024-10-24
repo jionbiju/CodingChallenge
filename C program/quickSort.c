@@ -51,20 +51,6 @@ OUTPUT
 Enter the size of the array
 5
 Enter array elements:
-32
-778
-23
-34
-5
-
-Array elements before sorting
-32      778     23      34      5
-PS G:\Jion Coding\C program> gcc .\quickSort.c
-PS G:\Jion Coding\C program> .\a.exe
->>
-Enter the size of the array
-5
-Enter array elements:
 123
 8
 56
