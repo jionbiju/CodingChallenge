@@ -1,4 +1,4 @@
-//Witing time and turnaround time of each process using FCFS
+//Waiting time and turnaround time of each process using FCFS scheduling
 #include <stdio.h>
 struct fcfs{
     int bt;
