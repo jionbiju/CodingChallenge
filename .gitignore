@@ -10,3 +10,6 @@ Java/out
 !Java/src/
 *.exe
 *.txt
+
+# dependencies
+/node_modules
