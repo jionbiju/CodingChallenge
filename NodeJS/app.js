@@ -20,7 +20,7 @@ app.get('/about', (req,res) => {
 });
 
 //Redirect
-app.get('/about-us', (req,res) => {
+app.get('/about-me', (req,res) => {
     res.redirect('/about');
 });
 
