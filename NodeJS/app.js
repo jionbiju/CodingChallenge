@@ -1,8 +1,12 @@
 const express = require('express');
+
+//express app
 const app = express();
 
-//Listen for request
+//Register view engine
+app.set('view engine', 'ejs');
 
+//Listen for request
 app.listen(3000);
 
 app.get('/', (req,res) => {
