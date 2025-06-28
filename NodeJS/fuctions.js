@@ -13,7 +13,6 @@ let sum = (a,b) => {
 console.log(sum(19,7));
 
 //function expression
-
 let sum2 = function (){
     console.log("Example of function expression");
 }
