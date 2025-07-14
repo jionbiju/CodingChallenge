@@ -2,12 +2,12 @@
 
 struct process {
     int id;
-    int at;    // Arrival Time
-    int bt;    // Burst Time
-    int wt;    // Waiting Time
-    int tt;    // Turnaround Time
-    int ft;    // Finish Time
-    int rt;    // Remaining Time
+    int at;    
+    int bt;
+    int wt;   
+    int tt;   
+    int ft;   
+    int rt;    
     int priority;
     int status;
 };
@@ -28,7 +28,7 @@ int main() {
     
     struct process p[n];
     
-    // Input process data
+
     for (int i = 0; i < n; i++) {
         p[i].id = i + 1;
         printf("Enter Arrival Time of Process P%d: ", i + 1);
@@ -44,7 +44,7 @@ int main() {
         printf("1. First Come First Serve (FCFS)\n");
         printf("2. Shortest Job First (SJF)\n");
         printf("3. Round Robin (RR)\n");
-        printf("4. Priority Scheduling (Non-Preemptive)\n");
+        printf("4. Priority Scheduling\n");
         printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -64,9 +64,9 @@ int main() {
                 break;
             case 4:
                 reset_process_data(p, n);
-                // Input priority for each process
+
                 for (int i = 0; i < n; i++) {
-                    printf("Enter Priority of Process P%d (lower number = higher priority): ", i + 1);
+                    printf("Enter Priority of Process P%d: ", i + 1);
                     scanf("%d", &p[i].priority);
                 }
                 priority_scheduling(p, n);
@@ -95,7 +95,7 @@ void reset_process_data(struct process p[], int n) {
 void fcfs_scheduling(struct process p[], int n) {
     printf("\n=== FCFS Scheduling ===\n");
     
-    // Sort processes by arrival time
+
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             if (p[j].at > p[j + 1].at) {
@@ -106,7 +106,7 @@ void fcfs_scheduling(struct process p[], int n) {
         }
     }
     
-    // Calculate waiting time and turnaround time
+
     p[0].wt = 0;
     p[0].tt = p[0].bt;
     p[0].ft = p[0].at + p[0].bt;
@@ -134,7 +134,7 @@ void sjf_scheduling(struct process p[], int n) {
     while (completed < n) {
         int min_bt = 9999, idx = -1;
         
-        // Find process with minimum burst time among arrived processes
+
         for (int i = 0; i < n; i++) {
             if (p[i].status == -1 && p[i].at <= curr_time && p[i].bt < min_bt) {
                 min_bt = p[i].bt;
@@ -167,7 +167,7 @@ void round_robin_scheduling(struct process p[], int n) {
     printf("Enter Time Quantum: ");
     scanf("%d", &quantum);
     
-    // Sort processes by arrival time
+
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             if (p[j].at > p[j + 1].at) {
@@ -207,7 +207,7 @@ void round_robin_scheduling(struct process p[], int n) {
                 completed++;
             }
             
-            // Add newly arrived processes to queue
+
             for (int i = 0; i < n; i++) {
                 if (!visited[i] && p[i].at <= time && p[i].rt > 0) {
                     queue[rear] = i;
@@ -216,14 +216,14 @@ void round_robin_scheduling(struct process p[], int n) {
                 }
             }
             
-            // Add current process back to queue if not completed
+            
             if (p[idx].rt > 0) {
                 queue[rear] = idx;
                 rear = (rear + 1) % (2 * n);
             }
         }
-        
-        // If queue is empty, find next process to arrive
+
+
         if (front == rear) {
             for (int i = 0; i < n; i++) {
                 if (p[i].rt > 0) {
@@ -240,14 +240,13 @@ void round_robin_scheduling(struct process p[], int n) {
 }
 
 void priority_scheduling(struct process p[], int n) {
-    printf("\n=== Priority Scheduling (Non-Preemptive) ===\n");
+    printf("\n=== Priority Scheduling ===\n");
     
     int total_tt = 0, total_wt = 0, completed = 0, curr_time = 0;
     
     while (completed < n) {
         int min_priority = 9999, idx = -1;
-        
-        // Find process with highest priority (lowest number) among arrived processes
+     
         for (int i = 0; i < n; i++) {
             if (p[i].status == -1 && p[i].at <= curr_time && p[i].priority < min_priority) {
                 min_priority = p[i].priority;
@@ -291,3 +290,110 @@ void display_results(struct process p[], int n) {
     printf("\nAverage Turnaround Time: %.2f\n", avg_tt);
     printf("Average Waiting Time: %.2f\n", avg_wt);
 }
+
+/*
+OUTPUT
+Enter the number of processes: 4
+Enter Arrival Time of Process P1: 0
+Enter Burst Time of Process P1: 10
+Enter Arrival Time of Process P2: 1
+Enter Burst Time of Process P2: 9
+Enter Arrival Time of Process P3: 2
+Enter Burst Time of Process P3: 12
+Enter Arrival Time of Process P4: 3
+Enter Burst Time of Process P4: 6
+
+=== CPU Scheduling Algorithms ===
+1. First Come First Serve (FCFS)
+2. Shortest Job First (SJF)
+3. Round Robin (RR)
+4. Priority Scheduling
+5. Exit
+Enter your choice: 1
+
+=== FCFS Scheduling ===
+
+Process Arrival Time    Burst Time      Waiting Time    Turnaround Time
+------- ------------    ----------      ------------    ---------------
+P1      0               10              0               10
+P2      1               9               9               18
+P3      2               12              17              29
+P4      3               6               28              34
+
+Average Turnaround Time: 22.75
+Average Waiting Time: 13.50
+
+=== CPU Scheduling Algorithms ===
+1. First Come First Serve (FCFS)
+2. Shortest Job First (SJF)
+3. Round Robin (RR)
+4. Priority Scheduling
+5. Exit
+Enter your choice: 2
+
+=== SJF Scheduling ===
+
+Process Arrival Time    Burst Time      Waiting Time    Turnaround Time
+------- ------------    ----------      ------------    ---------------
+P1      0               10              0               10
+P2      1               9               15              24
+P3      2               12              23              35
+P4      3               6               7               13
+
+Average Turnaround Time: 20.50
+Average Waiting Time: 11.25
+
+=== CPU Scheduling Algorithms ===
+1. First Come First Serve (FCFS)
+2. Shortest Job First (SJF)
+3. Round Robin (RR)
+4. Priority Scheduling
+5. Exit
+Enter your choice: 3
+
+=== Round Robin Scheduling ===
+Enter Time Quantum: 8
+
+Process Arrival Time    Burst Time      Waiting Time    Turnaround Time
+------- ------------    ----------      ------------    ---------------
+P1      0               10              22              32
+P2      1               9               23              32
+P3      2               12              23              35
+P4      3               6               21              27
+
+Average Turnaround Time: 31.50
+Average Waiting Time: 22.25
+
+=== CPU Scheduling Algorithms ===
+1. First Come First Serve (FCFS)
+2. Shortest Job First (SJF)
+3. Round Robin (RR)
+4. Priority Scheduling
+5. Exit
+Enter your choice: 4
+Enter Priority of Process P1: 2
+Enter Priority of Process P2: 1
+Enter Priority of Process P3: 3
+Enter Priority of Process P4: 4
+
+=== Priority Scheduling ===
+
+Process Arrival Time    Burst Time      Waiting Time    Turnaround Time
+------- ------------    ----------      ------------    ---------------
+P1      0               10              0               10
+P2      1               9               9               18
+P3      2               12              17              29
+P4      3               6               28              34
+
+Average Turnaround Time: 22.75
+Average Waiting Time: 13.50
+
+=== CPU Scheduling Algorithms ===
+1. First Come First Serve (FCFS)
+2. Shortest Job First (SJF)
+3. Round Robin (RR)
+4. Priority Scheduling
+5. Exit
+Enter your choice: 5
+Exiting...
+*/
