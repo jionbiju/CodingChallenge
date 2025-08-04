@@ -49,3 +49,11 @@ console.log("Removed element:",removed);
 
 //search the index of an element
 console.log("Index is ",arr.indexOf(77));
+
+//map()
+console.log("MAP EXAMPLE");
+let num=[1,4,9,16];
+let result = num.map((x) => {
+    return Math.sqrt(x);
+})
+console.log("Square Roots are",result);
