@@ -17,7 +17,7 @@ void fcfs(int n,int req[],int currhead){
         total_movement+=abs(currhead-req[i]);
         currhead=req[i];
     }
-    display(seq,n,total_movement);
+    display(seq,index,total_movement);
 }
 
 void scan(int n, int req[], int currhead, int disk_size) {
@@ -48,7 +48,7 @@ void scan(int n, int req[], int currhead, int disk_size) {
     }
 
     // Move to the end of disk
-    if (currhead != disk_size - 1) { // Avoid duplicate if already at the end
+    if (currhead != disk_size - 1) { 
         seq[index++] = disk_size - 1;
         total_movement += abs(currhead - (disk_size - 1));
         currhead = disk_size - 1;
@@ -103,7 +103,7 @@ void cscan(int n, int req[], int currhead, int disk_size) {
 
     // Jump to 0 (reset head position)
     seq[index++] = 0;
-    total_movement += (disk_size - 1);  // Corrected jump calculation
+    total_movement += (disk_size - 1); 
     currhead = 0;  // Reset head to 0 before serving remaining requests
 
     // Serve remaining requests from the beginning
@@ -135,6 +135,7 @@ void main(){
     printf("1-FCFS Disk Scheduling\n");
     printf("2-SCAN Disk Scheduling\n");
     printf("3-CSCAN Disk Scheduling\n");
+    printf("4-Exit\n");
     scanf("%d",&ch);
     switch(ch){
         case 1:fcfs(n,req,currhead);
