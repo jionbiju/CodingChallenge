@@ -92,7 +92,7 @@ void main(){
     
     fprintf(fp4,"%04X\t%-10s%-10s%-10s\n",locctr,label,opcode,operand);
     length=locctr-start;
-    printf("Program Length = %d",length);
+    printf("Program Length = %04X",length);
     
     fclose(fp1);
     fclose(fp2);
@@ -100,6 +100,8 @@ void main(){
     fclose(fp4);
 }
 /*
+OUTPUT
+Program Length = 001A
 input.txt
         START   2000
         LDA     FIVE
@@ -108,7 +110,7 @@ input.txt
         STCH    C1
 ALPHA   RESW    2
 FIVE    WORD    5
-CHARZ   BYTE    C'Z'
+CHARZ   BYTE    C'Zdfg'
 C1      RESB    1
         END
 
@@ -126,8 +128,8 @@ interf.txt
 2009	          STCH      C1        
 200C	ALPHA     RESW      2         
 2012	FIVE      WORD      5         
-2015	CHARZ     BYTE      C'Z'      
-2016	C1        RESB      1         
-2017	          END       1         
+2015	CHARZ     BYTE      C'Zdfg'   
+2019	C1        RESB      1         
+201A	          END       1         
 
 */
