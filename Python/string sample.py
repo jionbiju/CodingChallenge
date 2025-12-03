@@ -21,4 +21,16 @@ if "how" in a:
 if "apple" not in a :
     print("apple not in a")
 
+"""
+OUTPUT
+Length of the string is: 17
+6th character is: h
+Character from 6 to 9 is: how
+sdifuhsdofihs
+sfdiughfdghpdfu
+sfuoghdfghsufg
+b a n a n a 
+Yes how present in a
+apple not in a
 
+"""
