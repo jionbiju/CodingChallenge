@@ -9,6 +9,7 @@ if year%4 == 0:
         print(year, " is leap year.")
 else:
     print(year, " is not leap year.")
+
 """
 OUTPUT
 Enter a year:1900
