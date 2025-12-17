@@ -13,7 +13,6 @@ Enter the limit5
 * * * * 
 * * * * * 
 """
-
 # NUMBER PATTERN
 for i in range(n):
     for j in range(i+1):
