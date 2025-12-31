@@ -3,8 +3,6 @@ start = int(input("Enter starting number"))
 end = int(input("Enter ending number"))
 print("Prime numbers between {} and {} are:".format(start,end))
 for i in range(start,end+1):
-    if i==1:
-        continue
     if i>1:
         flag = 0
         for j in range(2,i):
