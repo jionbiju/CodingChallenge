@@ -11,5 +11,33 @@ Java/out
 *.exe
 *.txt
 
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pyc
+*.h
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+# ---- PyCharm / JetBrains ----
+.idea/
+*.iml
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
 # dependencies
 /node_modules
