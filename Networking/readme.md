@@ -36,7 +36,7 @@ After installation, Ubuntu will open and ask you to create a **Linux username an
 
 Inside the Ubuntu terminal run:
 
-sudo apt update
+sudo apt update <br>
 sudo apt install build-essential
 
 ### Step 4: Compile the Program
