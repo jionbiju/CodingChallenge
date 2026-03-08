@@ -34,6 +34,7 @@ dist/
 # ---- PyCharm / JetBrains ----
 .idea/
 *.iml
+*.out
 
 # ---- OS files ----
 .DS_Store
