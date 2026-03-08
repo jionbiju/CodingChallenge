@@ -238,7 +238,6 @@ while running:
             ball.setx(-329)
             speed = abs(ball.dx) + BALL_SPEED_INCREMENT
             ball.dx = min(speed, MAX_BALL_SPEED)
-
     except Exception:
         break
 
