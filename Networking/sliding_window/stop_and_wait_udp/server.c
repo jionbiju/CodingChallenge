@@ -33,7 +33,7 @@ int main(){
     int num_frames,frame,ack;
     int size_of_client = sizeof(client_addr);
     recvfrom(sock_d,&num_frames,sizeof(num_frames),0,(struct sockaddr *)&client_addr,&size_of_client);
-    printf("Number of frames to receive is %d\n",frame);
+    printf("Number of frames to receive is %d\n",num_frames);
     while(1){
         recvfrom(sock_d,&frame,sizeof(frame),0,(struct sockaddr *)&client_addr,&size_of_client);
         if(frame == -999){
@@ -54,7 +54,7 @@ int main(){
 OUTPUT
 Socket created successfully
 Binding successful
-Number of frames to receive is 0
+Number of frames to receive is 4
 Received Frame is 0
 Enter the ack for the frame 0:(1 for success, -1 for failure)
 1
