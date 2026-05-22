@@ -91,9 +91,9 @@ int main()
                     j++;
                 }
                 frame[j] = '\0';
-                send(new_sock,frame,strlen(frame),0);
-                recv(new_sock,&status,sizeof(status),0);
-                if (status == 1){
+                send(new_sock_d,frame,strlen(frame),0);
+                recv(new_sock_d,&status,sizeof(status),0);
+                if (status == 0){
                     printf("Retransmission successful\n");
                     i = error_frame + j;
                     break;

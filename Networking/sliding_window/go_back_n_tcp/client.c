@@ -35,6 +35,7 @@ int main (){
     printf("Connected to the server successfully\n");
     int status,error_frame;
     while(1){
+        memset(message,0,sizeof(message));
         recv(sock_d,message,sizeof(message),0);
         if(strcmp(message,"EXIT") == 0){
             printf("Transmition completed\n");
