@@ -55,16 +55,28 @@ int main() {
 
         if (status == 0) {
             printf("No error in frames.\n");
-            i += WINDOW_SIZE; // slide window forward
+            i += WINDOW_SIZE; 
         } else {
             printf("Error in frame %d\n", status);
-            // ✅ SELECTIVE REPEAT: retransmit ONLY the single error frame
-            char single_frame[2];
-            single_frame[0] = buffer[status];
-            single_frame[1] = '\0';
-            printf("Retransmitting only Frame %d:%c\n", status, buffer[status]);
-            send(new_sock_d, single_frame, sizeof(single_frame), 0);
-            i += WINDOW_SIZE; // still slide window, other frames were buffered
+            int err_frame= status;
+            while(1){
+                char single_frame[2];
+                single_frame[0] = buffer[status];
+                single_frame[1] = '\0';
+                printf("Retransmitting only Frame %d:%c\n", status, buffer[status]);
+                send(new_sock_d, single_frame, sizeof(single_frame), 0);
+                recv(new_sock_d,&status,sizeof(status),0);
+                if(status==0){
+                    printf("No error in the retransmitted frame.\n");
+                    i += WINDOW_SIZE;
+                    break;
+                }
+                else{
+                    printf("Again error..\n");
+                    err_frame=status;
+                }
+            }
+           
         }
     }
 
@@ -73,3 +85,33 @@ int main() {
     close(new_sock_d);
     return 0;
 }
+/*
+OUTPUT
+Socket created successfully
+Binded successfully
+Server listening to the port 3000
+Connection accepted
+Enter a message:
+abcdefghigkl
+Sending frame 0:a
+Sending frame 1:b
+Sending frame 2:c
+Sending frame 3:d
+Error in frame 2
+Retransmitting only Frame 2:c
+Again error..
+Retransmitting only Frame 2:c
+Again error..
+Retransmitting only Frame 2:c
+No error in the retransmitted frame.
+Sending frame 4:e
+Sending frame 5:f
+Sending frame 6:g
+Sending frame 7:h
+No error in frames.
+Sending frame 8:i
+Sending frame 9:g
+Sending frame 10:k
+Sending frame 11:l
+No error in frames.
+*/

@@ -46,14 +46,54 @@ int main() {
             printf("Enter the frame which has error:\n");
             scanf("%d", &error_frame);
             send(sock_d, &error_frame, sizeof(error_frame), 0);
-
-            
-            char single_frame[2];
-            recv(sock_d, single_frame, sizeof(single_frame), 0);
-            printf("Retransmitted Frame received: %c\n", single_frame[0]);
         }
     }
 
     close(sock_d);
     return 0;
 }
+/*
+OUTPUT
+Socket created successfully
+Connected to the server successfully
+Received frames: abcd
+Any Error:
+1-Yes
+0-No
+1
+Enter the frame which has error:
+2
+Received frames: c
+Any Error:
+1-Yes
+0-No
+1
+Enter the frame which has error:
+2
+Received frames: c
+Any Error:
+1-Yes
+0-No
+2
+Enter the frame which has error:
+2
+Received frames: c
+Any Error:
+1-Yes
+0-No
+0
+Transmission successful
+Received frames: efgh
+Any Error:
+1-Yes
+0-No
+0
+Transmission successful
+Received frames: igkl
+Any Error:
+1-Yes
+0-No
+0
+Transmission successful
+Transmission completed
+*/
