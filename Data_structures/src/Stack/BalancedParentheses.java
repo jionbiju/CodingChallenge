@@ -16,7 +16,7 @@ public class BalancedParentheses {
                 }
                 char curr = stack.pop();
                 if (curr == '{' && ch !='}' ||
-                    curr == '[' && ch != ']' || curr == '{' && ch != '}'){
+                    curr == '[' && ch != ']' || curr == '(' && ch != ')'){
                     return false;
                 }
             }
@@ -30,10 +30,12 @@ public class BalancedParentheses {
     public static void main(String[] args) {
         BalancedParentheses bp = new BalancedParentheses();
         System.out.println("Is valid parentheses:"+bp.isValid("{}[]()}"));
+        System.out.println("Is valid parentheses:"+bp.isValid("(]"));
     }
 }
 
 /*
 OUTPUT
+Is valid parentheses:false
 Is valid parentheses:false
  */
