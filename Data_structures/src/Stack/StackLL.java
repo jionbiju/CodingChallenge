@@ -1,4 +1,4 @@
-package linkedlist;
+package Stack;
 
 class SNode{
     int data;

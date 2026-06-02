@@ -1,4 +1,4 @@
-package arrays;
+package Stack;
 
 public class StackArray {
     int size = 100;
