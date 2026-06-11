@@ -6,6 +6,7 @@ public class QueueArray {
     int rear = -1;
     int [] arr = new int[size];
 
+
     void enqueue(int data){
         if (rear == size-1){
             throw new IndexOutOfBoundsException("Queue is full.");
