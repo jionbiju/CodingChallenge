@@ -14,7 +14,7 @@ public class InsertionSort {
         }
     }
     public static void main(String[] args) {
-        int [] arr = {5,8,1,345,7646,77,45};
+        int [] arr = {5,8,1,77,45};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
