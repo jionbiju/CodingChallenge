@@ -4,12 +4,23 @@ C++/CMakeLists.txt
 C++/main.cpp
 !C++/
 
+# Java
 Java/.idea
 Java/Java.iml
 Java/out
 !Java/src/
 *.exe
 *.txt
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+
+# Build folders
+out/
+target/
+build/
 
 # ---- Python ----
 __pycache__/
