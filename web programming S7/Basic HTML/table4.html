@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Table</title>
+</head>
+
+<body>
+
+<table border="1" cellspacing="0" cellpadding="5">
+
+    <!-- Header Row -->
+    <tr>
+        <th>Header column 1</th>
+        <th>Header column 2</th>
+        <th>Header column 3</th>
+        <th>Header column 4</th>
+    </tr>
+
+    <!-- Row 2 -->
+    <tr>
+        <td>Row 2 - Item 1</td>
+        <td>Row 2 - Item 2</td>
+
+        <td rowspan="2">
+            <b>Row 2: Nested Table 1</b>
+
+            <table border="1" cellspacing="0" cellpadding="3">
+                <tr>
+                    <th>Row 1 Header</th>
+                    <td>item</td>
+                </tr>
+
+                <tr>
+                    <th>Row 2 Header</th>
+                    <td>item</td>
+                </tr>
+
+                <tr>
+                    <th>Row 3 Header</th>
+                    <td>item</td>
+                </tr>
+            </table>
+
+        </td>
+
+        <td>
+            Row 2 - Item 4
+            <br>
+            A second line
+        </td>
+    </tr>
+
+    <!-- Row 3 -->
+    <tr>
+
+        <td>
+
+            <b>Row 3: Nested Table 2</b>
+
+            <table border="1" cellspacing="0" cellpadding="3">
+
+                <tr>
+                    <th>Row 1 Header</th>
+                    <td>item</td>
+                </tr>
+
+                <tr>
+                    <th>Row 2 Header</th>
+                    <td>item</td>
+                </tr>
+
+            </table>
+
+        </td>
+
+        <td>Row 3 - Item 2</td>
+
+        <td rowspan="2">
+            Row 3 - Item 3
+        </td>
+
+    </tr>
+
+    <!-- Row 4 -->
+    <tr>
+
+        <td>Row 4 - Item 1</td>
+        <td>Row 4 - Item 2</td>
+        <td>Row 4 - Item 3</td>
+
+    </tr>
+
+    <!-- Row 5 -->
+    <tr>
+        <td colspan="4">
+            Row 5 - Last row of outer table
+        </td>
+    </tr>
+
+</table>
+<h2>User Registration</h2>
+<form action="">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Enter name" maxlength="27" required>
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="enter password" required>
+
+</form>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Subjects</th>
+        <th>Marks</th>
+    </tr>
+    <tr>
+        <td rowspan="3">Mark smith</td>
+        <td>english</td>
+        <td>67</td>
+    </tr>
+    <tr>
+        <td>naths</td>
+        <td>naths</td>
+    </tr>
+    <tr>
+        <td>science</td>
+        <td>science</td>
+    </tr>
+</table>
+</body>
+</html>
