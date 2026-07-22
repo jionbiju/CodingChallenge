@@ -1,24 +1,56 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Validation</title>
 </head>
 <body>
-    <form action="">
+    <form id="myForm">
         Name
         <input type="text" id="name">
         <br><br>
+
         Password
         <input type="password" id="password">
         <br><br>
+
         Phone
         <input type="tel" id="phone">
         <br><br>
-        <input type="submit" name="" id="sub-btn">
+
+        <input type="submit" value="Submit">
     </form>
+
     <script>
-       
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+
+            let name = document.getElementById("name").value.trim();
+            let password = document.getElementById("password").value;
+            let phone = document.getElementById("phone").value.trim();
+
+            if (name === "") {
+                alert("Name is required");
+                event.preventDefault();
+                return;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                event.preventDefault();
+                return;
+            }
+
+            let phonePattern = /^[0-9]{10}$/;
+
+            if (!phonePattern.test(phone)) {
+                alert("Enter a valid 10-digit phone number");
+                event.preventDefault();
+                return;
+            }
+
+            alert("Form submitted successfully!");
+        });
     </script>
 </body>
 </html>
