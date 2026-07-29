@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Task Management System</h1>
+
+    <div class="input-box">
+        <input type="text" id="task" placeholder="Enter Task">
+
+        <select id="member">
+            <option value="" disabled selected>Select Member</option>
+            <option>Gopika</option>
+            <option>Hana</option>
+            <option>Jayakiran</option>
+            <option>Jinob</option>
+        </select>
+
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Assigned To</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="taskList">
+
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
