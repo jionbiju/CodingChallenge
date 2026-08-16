@@ -91,3 +91,10 @@ int main()
 
     return 0;
 }
+/*
+OUTPUT
+Enter the expression: a+b*c
+Expression is successfully parsed.
+Enter the expression: a++b
+Error: Invalid expression
+PS G:\Jion Coding\C program> */
