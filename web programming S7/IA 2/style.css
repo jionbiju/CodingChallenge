@@ -1,0 +1,21 @@
+p {
+    text-align: end;
+    font-weight: bold;
+    border: 5px solid black;
+}
+table{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+th{
+    border: 2px solid black;
+    text-decoration: underline;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+td{
+    border: 2px solid black;
+    background: yellow;
+    padding: 10px;
+    text-align: center;
+}
