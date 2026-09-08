@@ -1,21 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-
-    <title>Square</title>
+  <head>
+    <title>Largest of Three Numbers</title>
 
     <script>
+      var a = Number(prompt("Enter first number:"));
+      var b = Number(prompt("Enter second number:"));
+      var c = Number(prompt("Enter third number:"));
 
-        var n = Number(prompt("Enter an integer:"));
+      var largest;
 
-        var square = n * n;
+      if (a >= b && a >= c) {
+        largest = a;
+      } else if (b >= a && b >= c) {
+        largest = b;
+      } else {
+        largest = c;
+      }
 
-        document.write("Square of " + n + " = " + square);
-
+      document.write("Largest number = " + largest);
     </script>
+  </head>
 
-</head>
-
-<body>
-</body>
+  <body></body>
 </html>
